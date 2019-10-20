@@ -17,9 +17,9 @@ from subprocess import Popen
 def index():
     return render_template("index.html")
 
-@app.route('/about')
+@app.route('/caregiver')
 def about():
-    return render_template("about.html")
+    return render_template("caregiver.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

@@ -4,7 +4,13 @@
 {% block title %}About{% endblock %}
 {% block body %}
 <div class="jumbotron">
-  <h1>The About Page</h1>
-  <p class="lead">You can learn more about my website here.</p>
+  <h1>Requirements</h1>
+  <p class="lead">You can input baseline health requirements here.</p>
+  <form action="" method="get" onsubmit="myFunction()">
+                 Vitamins: <input type="boolean" name="vitamins_taken" />  <br />
+                 Glasses of Water: <input type="number" name="glasses_taken" /> <br />
+                 Medication: <input type="boolean" name="medicine_taken" />
+                 <input type="submit" value="Submit" />
+             </form>
 </div>
 {% endblock %}
