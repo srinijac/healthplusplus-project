@@ -15,11 +15,9 @@ def addnumber(num):
                             )
     print(validation_request.friendly_name)
 
-def sendsms(first, last, number):
+def sendsms(message, number):
     message = client.messages.create(
         to=str(number),
         from_="+12052930681",
-        body=("your name is " + first + " " + last))
-    return message
-
+        body=str(message))
     print(message.sid)

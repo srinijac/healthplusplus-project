@@ -31,9 +31,9 @@ def login():
     first = request.values.get("first_name")
     last = request.values.get("last_name")
     number = request.values.get("to_phone_num")
-    message = "You're signed up! Welcome to ___, %s %s%s%s!"
+    message = str("You're signed up! Welcome to ___, " + first + " " + last +"!")
     print(number)
     #tr.addnumber(number)
-    tr.sendsms(message, number first, last)
+    tr.sendsms(message, number)
     # os.system('python tr.py')
     return render_template("index.html")
