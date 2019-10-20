@@ -6,7 +6,7 @@
 
 <p>When you submit the form, a function is triggered which alerts some text.</p>
 
-<form action="smstest" method="post" onsubmit="myFunction()">
+<form action="/tr.py" method="post" onsubmit="myFunction()">
                First Name: <input type="text" name="first_name">  <br />
                Last Name: <input type="text" name="last_name" />
                <input type="submit" value="Submit" /> <br />
@@ -14,8 +14,7 @@
 
 <script>
 function myFunction() {
-  alert("the name was recorded");
-  // return redirect(url_for('index.html'))
+  alert("The name was recorded.");
 }
 </script>
 

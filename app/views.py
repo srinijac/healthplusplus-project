@@ -8,6 +8,12 @@ from app import app
 from twilio.rest import Client
 import cgi
 import cgitb
+import os
+from subprocess import Popen
+def run(runfile):
+  with open(runfile,"tr.py") as rnf:
+    exec(rnf.read())
+from subprocess import call
 
 @app.route('/')
 def index():
@@ -16,6 +22,7 @@ def index():
 @app.route('/about')
 def about():
     return render_template("about.html")
+
 
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
@@ -30,7 +37,7 @@ def about():
 def login():
     return render_template("thissucks.html")
 
-@app.route('/smstest')
-def about():
-    execfile('tr.py')
+@app.route('/tr.py', methods=['GET', 'POST'])
+def smstest():
+    os.system('python tr.py')
     return render_template("index.html")
