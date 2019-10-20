@@ -38,7 +38,7 @@ def backtohome():
     return render_template("index.html")
 
 @app.route('/requirements', methods=['GET', 'POST'])
-def backtohome():
+def back():
     vitamins = request.values.get("vitamins_taken")
     water = request.values.get("glasses_taken")
     medication = request.values.get("medicine_taken")
