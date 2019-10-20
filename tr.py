@@ -5,6 +5,8 @@ cgitb.enable()
 
 form = cgi.FieldStorage()
 
+print(type(form))
+print(form)
 first = form.getvalue('first_name')
 print(first)
 last = form.getvalue('last_name')
@@ -16,9 +18,9 @@ auth_token  = "5f5479d1ea747a53454b61d812376cc4"
 
 client = Client(account_sid, auth_token)
 
-message = client.messages.create(
-    to="+14074373965",
-    from_="+12052930681",
-    body=("your name is " + str(type(first))))
+# message = client.messages.create(
+#     to="+14074373965",
+#     from_="+12052930681",
+#     body=("your name is " + str(type(first))))
 
-print(message.sid)
+# print(message.sid)
