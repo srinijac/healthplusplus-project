@@ -6,11 +6,18 @@
 <div class="jumbotron">
   <h1>Requirements</h1>
   <p class="lead">You can input baseline health requirements here.</p>
-  <form action="requirements" method="get" onsubmit="myFunction()">
+  <form action="requirements" method="get" onsubmit="myFunction2()">
                  Vitamins: <input type="boolean" name="vitamins_taken" />  <br />
                  Glasses of Water: <input type="number" name="glasses_taken" /> <br />
-                 Medication: <input type="boolean" name="medicine_taken" />
+                 Medication: <input type="boolean" name="medicine_taken" /> <br />
+                 Contact Number (starting with +1): <input type="text" name="to_phone_num2" />
                  <input type="submit" value="Submit" />
              </form>
+ <script>
+ function myFunction2() {
+   alert("The requirments were recorded.");
+ }
+ </script>
+
 </div>
 {% endblock %}

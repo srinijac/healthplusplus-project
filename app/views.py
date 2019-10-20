@@ -30,7 +30,7 @@ def backtohome():
     first = request.values.get("first_name")
     last = request.values.get("last_name")
     number = request.values.get("to_phone_num1")
-    m = "You're signed up! Welcome to Rapport, " + str(first) + " " + str(last) + "!"
+    m = str(first) + " " + str(last) + " is signed up! Welcome to Rapport!"
     print(number)
     #tr.addnumber(number)
     tr.sendsms(number, m)
@@ -38,7 +38,7 @@ def backtohome():
     return render_template("index.html")
 
 @app.route('/requirements', methods=['GET', 'POST'])
-def back():
+def homewithreminders():
     vitamins = request.values.get("vitamins_taken")
     water = request.values.get("glasses_taken")
     medication = request.values.get("medicine_taken")
@@ -48,4 +48,4 @@ def back():
     #tr.addnumber(number)
     tr.sendsms(number, m)
     # os.system('python tr.py')
-    return render_template("index.html")
+    return render_template("indexfinal.html")
