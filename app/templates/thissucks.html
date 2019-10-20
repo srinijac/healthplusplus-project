@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+<html>
+<body>
+
+<p>When you submit the form, a function is triggered which alerts some text.</p>
+
+<form action="/cgi-bin/tr.py" method="get" onsubmit="myFunction()">
+               First Name: <input type="text" name="first_name">  <br />
+               Last Name: <input type="text" name="last_name" />
+               <input type="submit" value="Submit" />
+           </form>
+
+<script>
+function myFunction() {
+  alert("the name was recorded");
+  // return redirect(url_for('index.html'))
+}
+</script>
+
+</body>
+</html>
+{% endblock %}
