@@ -4,6 +4,8 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 import json
 from app.forms import LoginForm
 from app import app
+from app import tr
+import tr.py
 
 #twilio
 from twilio.rest import Client
@@ -40,10 +42,8 @@ def login():
 
 @app.route('/tr.py', methods=['GET', 'POST'])
 def smstest():
-    params = {
-        first = request.values.get['first_name']
-        last = request.values.get['last_name']
-    }
-    json.dumps(params)
-    os.system('python tr.py')
+    first = request.values.get['first_name']
+    last = request.values.get['last_name']
+    twilio.sendsms(first, last)
+    # os.system('python tr.py')
     return render_template("index.html")
