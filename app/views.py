@@ -29,7 +29,7 @@ def login():
 def backtohome():
     first = request.values.get("first_name")
     last = request.values.get("last_name")
-    number = request.values.get("to_phone_num")
+    number = request.values.get("to_phone_num1")
     m = "You're signed up! Welcome to Rapport, " + str(first) + " " + str(last) + "!"
     print(number)
     #tr.addnumber(number)
@@ -42,7 +42,7 @@ def back():
     vitamins = request.values.get("vitamins_taken")
     water = request.values.get("glasses_taken")
     medication = request.values.get("medicine_taken")
-    number = +14074373965
+    number = request.values.get("to_phone_num2")
     m = "You must take: " + str(vitamins) + ", " + str(water) + " glasses of water, and " + str(medication) + " medication."
     print(number)
     #tr.addnumber(number)
