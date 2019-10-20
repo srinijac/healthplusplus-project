@@ -1,7 +1,7 @@
 # views.py
 
-from flask import render_template
-
+from flask import render_template, flash, redirect, url_for
+from app.forms import LoginForm
 from app import app
 
 @app.route('/')
