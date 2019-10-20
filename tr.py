@@ -1,15 +1,15 @@
 from twilio.rest import Client
 import cgi
-import cgitb #found this but isn't used?
+import cgitb
 cgitb.enable()
 
 form = cgi.FieldStorage()
 
-print(type(form))
-print(form)
-first = form.getvalue('first_name')
-print(first)
-last = form.getvalue('last_name')
+# print(type(form))
+# print(form)
+# first = form.getvalue('first_name')
+# print(first)
+# last = form.getvalue('last_name')
 
 # Your Account SID from twilio.com/console
 account_sid = "ACa3ee54b5030f3a2b427107e4ff8517af"
