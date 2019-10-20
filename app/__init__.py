@@ -1,6 +1,6 @@
 # app/__init__.py
 
-from flask import flask
+from flask import Flask
 
 # initialize the app
 app = Flask(__name__, instance_relative_config = True)
