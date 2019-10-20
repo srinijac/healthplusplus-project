@@ -43,7 +43,7 @@ def back():
     water = request.values.get("glasses_taken")
     medication = request.values.get("medicine_taken")
     number = +14074373965
-    m = "You must take: " + str(vitamins) + "vitamins, " + str(water) + "vitamins, and " + str(medication) + "medication."
+    m = "You must take: " + str(vitamins) + ", " + str(water) + " glasses of water, and " + str(medication) + " medication."
     print(number)
     #tr.addnumber(number)
     tr.sendsms(number, m)
