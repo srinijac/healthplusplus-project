@@ -5,7 +5,7 @@ import json
 from app.forms import LoginForm
 from app import app
 from app import tr
-import tr.py
+from app.tr import sendsms
 
 #twilio
 from twilio.rest import Client
@@ -13,10 +13,6 @@ import cgi
 import cgitb
 import os
 from subprocess import Popen
-def run(runfile):
-  with open(runfile,"tr.py") as rnf:
-    exec(rnf.read())
-from subprocess import call
 
 @app.route('/')
 def index():
@@ -26,24 +22,14 @@ def index():
 def about():
     return render_template("about.html")
 
-
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     form = LoginForm()
-#     # if form.validate_on_submit():
-#     #     flash('Login requested for user {}, remember_me={}'.format(
-#     #         form.username.data, form.remember_me.data))
-#     #     return redirect(url_for('index.html'))
-#     return render_template('login.html', title='Sign In', form=form)
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template("thissucks.html")
+    return render_template("login.html")
 
-@app.route('/tr.py', methods=['GET', 'POST'])
+@app.route('/tr', methods=['GET', 'POST'])
 def smstest():
-    first = request.values.get['first_name']
-    last = request.values.get['last_name']
-    twilio.sendsms(first, last)
+    first = request.values.get("first_name")
+    last = request.values.get("last_name")
+    tr.sendsms(first, last)
     # os.system('python tr.py')
     return render_template("index.html")

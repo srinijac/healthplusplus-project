@@ -4,16 +4,15 @@ from twilio.rest import Client
 # cgitb.enable()
 #
 # form = cgi.FieldStorage()
-#
-# print(type(form))
-# print(form)
+# #
+# # print(type(form))
+# # print(form)
 # first = form.getvalue('first_name')
-# print(first)
+# # print(first)
 # last = form.getvalue('last_name')
 
 def sendsms(first, last):
-    print (first)
-    
+
     # Your Account SID from twilio.com/console
     account_sid = "ACa3ee54b5030f3a2b427107e4ff8517af"
     # Your Auth Token from twilio.com/console
@@ -24,6 +23,7 @@ def sendsms(first, last):
     message = client.messages.create(
         to="+14074373965",
         from_="+12052930681",
-        body=("your name is " + str(type(first))))
+        body=("your name is " + first + " " + last))
+    return message
 
     print(message.sid)
