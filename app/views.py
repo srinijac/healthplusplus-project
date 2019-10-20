@@ -30,7 +30,7 @@ def backtohome():
     first = request.values.get("first_name")
     last = request.values.get("last_name")
     number = request.values.get("to_phone_num")
-    m = "You're signed up! Welcome to Rapport, " + str(first) + " " + str(last)
+    m = "You're signed up! Welcome to Rapport, " + str(first) + " " + str(last) + "!"
     print(number)
     #tr.addnumber(number)
     tr.sendsms(number, m)

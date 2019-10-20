@@ -19,5 +19,5 @@ def sendsms(number, mess=""):
     message = client.messages.create(
         to=str(number),
         from_="+12052930681",
-        body=mess + "!")
+        body=mess)
     print(message.sid)
