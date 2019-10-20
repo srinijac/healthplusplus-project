@@ -1,6 +1,3 @@
 # healthplusplus-project
 
-Bryan was here to practice his github stuff~
-
-hi this is sri
-
+An general wellness webapp to notify users of daily activities.
