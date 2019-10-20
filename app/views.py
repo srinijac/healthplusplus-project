@@ -30,23 +30,7 @@ def about():
 def login():
     return render_template("thissucks.html")
 
-@app.route('/sms')
-def message():
-    inputs = cgi.FieldStorage()
-
-    first_name = inputs.getvalue('first_name').capitalize()
-    last_name  = inputs.getvalue('last_name').capitalize()
-
-    # Your Account SID from twilio.com/console
-    account_sid = "ACa3ee54b5030f3a2b427107e4ff8517af"
-    # Your Auth Token from twilio.com/console
-    auth_token  = "5f5479d1ea747a53454b61d812376cc4"
-
-    client = Client(account_sid, auth_token)
-
-    message = client.messages.create(
-        to="+14074373965",
-        from_="+12052930681",
-        body=("your name is", first_name, last_name)
-
-    # return render_template("index.html")
+@app.route('/smstest')
+def about():
+    execfile('tr.py')
+    return render_template("index.html")
