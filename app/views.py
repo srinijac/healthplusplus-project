@@ -6,4 +6,4 @@ from app import app
 
 @app.route('/')
 def index():
-    return render_template("reactTTT.js")
+    return render_template("test.html")
